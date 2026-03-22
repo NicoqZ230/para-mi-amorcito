@@ -239,3 +239,88 @@ h1 {
         opacity: 1;
     }
 }
+
+/*RESPONSIVE*/
+@media screen and (max-width: 600px) {
+
+    body {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .envelope-wrapper {
+        width: 100%;
+    }
+
+    .envelope-wrapper > .envelope {
+        width: 100%;
+        height: 280px;
+    }
+
+    /* tapa del sobre adaptada */
+    .envelope-wrapper > .envelope::before {
+        border-top: 160px solid var(--envelope-tab);
+        border-right: 50vw solid transparent;
+        border-left: 50vw solid transparent;
+    }
+
+    .envelope > .letter {
+        padding: 15px;
+    }
+
+    .envelope > .letter > .text {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 10px;
+    }
+
+    /* 📸 fotos adaptadas */
+    .foto-recuerdo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .foto-recuerdo.derecha {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .foto-recuerdo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .foto-recuerdo span {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    /*corazón más pequeño*/
+    .heart {
+        width: 22px;
+        height: 22px;
+    }
+
+    .heart:before,
+    .heart:after {
+        width: 22px;
+        height: 22px;
+    }
+
+    .heart:before {
+        top: -11px;
+    }
+
+    .heart:after {
+        right: 11px;
+    }
+}
